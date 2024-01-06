@@ -7,7 +7,7 @@ const UserEdit = ({ userId }) => {
 
   useEffect(() => {
     // Fetch user details for editing
-    axios.get(`http://127.0.0.1:8000/users/${userId}/`)
+    axios.get(`http://13.235.24.70:8000/users/${userId}/`)
       .then(response => {
         setUser(response.data);
         setRole(response.data.role);
@@ -17,7 +17,7 @@ const UserEdit = ({ userId }) => {
 
   const handleSave = () => {
     // Save updated role to your Django backend
-    axios.patch(`http://127.0.0.1:8000/users/${userId}/`, { role })
+    axios.patch(`http://13.235.24.70:8000/users/${userId}/`, { role })
       .then(response => console.log('User updated successfully:', response.data))
       .catch(error => console.error('Error updating user:', error));
   };

@@ -55,7 +55,7 @@ export const AuthProvider = ({ children }) => {
 
   const fetchUserDataAndRole = async (token) => {
     try {
-      const userResponse = await fetch('http://localhost:8000/api/user_info/', {
+      const userResponse = await fetch('http://13.235.24.70:8000/api/user_info/', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

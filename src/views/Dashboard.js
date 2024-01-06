@@ -62,7 +62,7 @@ function Dashboard() {
     const fetchStatus = async () => {
       try {
         // Fetch data for the status chart
-        const statusChartResponse = await fetch('http://localhost:8000/api/status_chart/', {
+        const statusChartResponse = await fetch('http://13.235.24.70:8000/api/status_chart/', {
           method: 'POST',
         });
         const apiResponse = await statusChartResponse.json();
@@ -95,7 +95,7 @@ function Dashboard() {
         }
 
          // Fetch data for the type chart
-         const typeChartResponse = await fetch('http://localhost:8000/api/type_chart/', {
+         const typeChartResponse = await fetch('http://13.235.24.70:8000/api/type_chart/', {
           method: 'POST',
         });
         const typeChartData = await typeChartResponse.json();
@@ -160,7 +160,7 @@ function Dashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/home/', {
+        const response = await fetch('http://13.235.24.70:8000/home/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

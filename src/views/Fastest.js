@@ -24,7 +24,7 @@ function Fastest() {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch('http://127.0.0.1:8000/api/api-list', {
+            const response = await fetch('http://13.235.24.70:8000/api/api-list', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

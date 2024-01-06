@@ -20,7 +20,7 @@ const Register = () => {
     e.preventDefault();
 
     // Perform registration API call here using fetch or Axios
-    fetch('http://localhost:8000/api/users/create/', {
+    fetch('http://13.235.24.70:8000/api/users/create/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

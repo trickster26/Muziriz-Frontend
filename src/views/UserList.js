@@ -15,7 +15,7 @@ const UserList = () => {
   useEffect(() => {
     // Fetch the user list from the server
     axios
-      .get("http://127.0.0.1:8000/api/users/")
+      .get("http://13.235.24.70:8000/api/users/")
       .then((response) => {
         setUsers(response.data);
         setLoading(false);
@@ -39,7 +39,7 @@ const UserList = () => {
     if (selectedUser) {
       const { id, ...userData } = selectedUser;
       axios
-        .put(`http://127.0.0.1:8000/api/users/${id}/`, userData)
+        .put(`http://13.235.24.70:8000/api/users/${id}/`, userData)
         .then((response) => {
           console.log("User updated successfully:", response.data);
           // You may want to update the state or perform other actions after a successful update

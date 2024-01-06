@@ -19,7 +19,7 @@ const SystemsHealth = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/system-list/")
+      .get("http://13.235.24.70:8000/api/system-list/")
       .then((response) => {
         setSystems(response.data);
 
@@ -35,7 +35,7 @@ const SystemsHealth = () => {
     setSelectedSystem(cpuId);
 
     axios
-      .get(`http://localhost:8000/api/system-health/${cpuId}/`)
+      .get(`http://13.235.24.70:8000/api/system-health/${cpuId}/`)
       .then((response) => setHealthData(response.data))
       .catch((error) => console.error(error));
   };

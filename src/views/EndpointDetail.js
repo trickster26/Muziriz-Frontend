@@ -52,7 +52,7 @@ function EndpointDetail(props) {
     const fetchDetailData = async () => {
       try {
         const response = await fetch(
-          `http://127.0.0.1:8000/api/endpoint-detail/${id}`
+          `http://13.235.24.70:8000/api/endpoint-detail/${id}`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -99,7 +99,7 @@ function EndpointDetail(props) {
 
       try {
         const response = await fetch(
-          `http://127.0.0.1:8000/api/endpoint-hit-history/?endpoint_name=${
+          `http://13.235.24.70:8000/api/endpoint-hit-history/?endpoint_name=${
             detailData.endpointName
           }&from=${fromDate.toISOString()}`
         );
